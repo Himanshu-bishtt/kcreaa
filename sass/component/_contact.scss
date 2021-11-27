@@ -1,0 +1,61 @@
+.contact {
+  margin-top: 12rem;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  margin-top: 4rem;
+  padding: 1rem 6rem;
+  font-family: $font-primary;
+}
+
+.contact__image {
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.contact__form {
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background: $color-grey-light-1;
+    width: 90%;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-grey-dark-1;
+      box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  &--name {
+    margin-bottom: 2rem;
+  }
+
+  &--email {
+    margin-bottom: 2rem;
+  }
+
+  &--option {
+    margin-bottom: 2rem;
+  }
+
+  &--textarea {
+    margin-bottom: 2rem;
+  }
+}

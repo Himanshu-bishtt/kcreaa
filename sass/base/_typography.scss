@@ -1,0 +1,26 @@
+.heading--primary {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  padding: 1.5rem 5rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(228, 63, 63, 0.9),
+    rgba(179, 45, 127, 0.9)
+  );
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+
+  &:active {
+    transform: translateY(0px);
+  }
+}

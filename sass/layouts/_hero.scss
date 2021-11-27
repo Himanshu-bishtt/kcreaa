@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    background: url("/dist/static/hero-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -20px;
+    height: 80vh;
+    width: 65vw;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    // clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  &__text {
+    background-color: $color-grey-light-1;
+    background: linear-gradient(
+      to right bottom,
+      $color-primary,
+      rgba(196, 74, 179, 0.9)
+    );
+    color: #fff;
+    padding: 4rem;
+    width: 50rem;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 55%;
+    z-index: 1;
+
+    &-heading {
+      font-size: 4rem;
+    }
+
+    &-para {
+      font-size: 2rem;
+    }
+  }
+}

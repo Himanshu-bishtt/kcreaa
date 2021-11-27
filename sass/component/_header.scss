@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  // margin-bottom: 3rem;
+  margin-top: 2rem;
+  // position: sticky;
+  // background-color: #fff;
+  // top: 0;
+  // left: 0;
+  // z-index: 10;
+
+  .logo-image {
+    width: 7rem;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation__item {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .current {
+    color: $color-primary;
+  }
+
+  .navigation__link {
+    padding: 1rem 2rem;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .social-media {
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
