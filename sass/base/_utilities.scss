@@ -63,18 +63,25 @@
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0rem;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.842);
   color: #fff;
-  transition: all 3s;
+  height: 4rem;
+  // transition: all 3s;
 
   &__content {
     margin: 0 auto;
   }
 
   &__close {
-    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background: rgba(179, 179, 179, 0.164);
+      border-radius: 50%;
+    }
   }
 }
 

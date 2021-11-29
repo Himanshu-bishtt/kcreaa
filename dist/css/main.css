@@ -64,15 +64,19 @@ a {
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 0rem;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.842);
   color: #fff;
-  transition: all 3s; }
+  height: 4rem; }
   .topbar__content {
     margin: 0 auto; }
   .topbar__close {
-    margin-right: 1rem; }
+    padding: 0.5rem 1rem; }
+    .topbar__close:hover {
+      background: rgba(179, 179, 179, 0.164);
+      border-radius: 50%; }
 
 .remove-topbar {
   transform: translateY(-20px);
@@ -287,7 +291,8 @@ a {
   padding: 4rem 1rem;
   margin: 1rem 1rem;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 0rem 5rem 5rem 5rem; }
+  border-radius: 0rem 5rem 5rem 5rem;
+  margin-bottom: 3rem; }
 
 .testimonials__image img {
   object-fit: cover;

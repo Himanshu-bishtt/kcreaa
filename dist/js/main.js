@@ -5,7 +5,7 @@ $(document).ready(function () {
     autoWidth: false,
     item: 3,
     loop: false,
-    controls: true,
+    // controls: true,
     pager: true,
     onSliderLoad: function () {
       $("#testimonialSlider").removeClass("cS-hidden");
