@@ -2,14 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
-  // margin-bottom: 3rem;
-  margin-top: 2rem;
-  // position: sticky;
-  // background-color: #fff;
-  // top: 0;
-  // left: 0;
-  // z-index: 10;
+  // height: 4rem;
+  background-color: #fff;
+  padding: 1rem 2rem 0rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   .logo-image {
     width: 7rem;

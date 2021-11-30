@@ -72,6 +72,8 @@ a {
   height: 4rem; }
   .topbar__content {
     margin: 0 auto; }
+    .topbar__content:hover {
+      opacity: 0.8; }
   .topbar__close {
     padding: 0.5rem 1rem; }
     .topbar__close:hover {
@@ -154,8 +156,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
-  margin-top: 2rem; }
+  background-color: #fff;
+  padding: 1rem 2rem 0rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
   .header .logo-image {
     width: 7rem; }
   .header .navigation {
