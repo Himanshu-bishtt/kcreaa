@@ -67,13 +67,13 @@ for (let i = 1; i < navigationLinks.length; ++i) {
     const navigationContent = navigationLinks[i].textContent.toLowerCase();
     switch (navigationContent) {
       case "work":
-        window.scroll(0, 780);
+        window.scroll(0, 680);
         break;
       case "gallery":
-        window.scroll(0, 1480);
+        window.scroll(0, 1380);
         break;
       case "contact":
-        window.scroll(0, 3200);
+        window.scroll(0, 3100);
         break;
     }
   });

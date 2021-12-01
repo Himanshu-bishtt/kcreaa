@@ -3,24 +3,28 @@
   align-items: center;
 
   &__image {
-    background: url("/dist/static/hero-3.jpg");
+    background: url("/dist/static/hero-4.jpg");
+    transform: rotateY(180deg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: -20px;
+    background-position-x: 20px;
+    background-position-y: -50px;
     height: 80vh;
-    width: 65vw;
+    width: 70vw;
+    width: 100vw;
     // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     // clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
   }
 
   &__text {
+    display: none;
     background-color: $color-grey-light-1;
     background: linear-gradient(
       to right bottom,
-      $color-primary,
-      rgba(196, 74, 179, 0.9)
+      rgba(238, 238, 238, 0.678),
+      rgba(238, 238, 238, 0.678)
     );
-    color: #fff;
+    // color: #333;
     padding: 4rem;
     width: 50rem;
     box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
