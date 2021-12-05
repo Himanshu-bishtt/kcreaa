@@ -1,0 +1,17 @@
+.success {
+  //   display: none;
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 29rem;
+  width: 40vw;
+  //   height: 68vh;
+  font-size: 1.5rem;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+
+  & > * {
+    padding: 1rem;
+  }
+
+  a {
+  }
+}
