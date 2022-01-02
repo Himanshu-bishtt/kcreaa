@@ -3,9 +3,9 @@
 $(document).ready(function () {
   $("#testimonialSlider").lightSlider({
     autoWidth: false,
-    item: 3,
+    item: 2,
     loop: false,
-    // controls: true,
+    controls: false,
     pager: true,
     onSliderLoad: function () {
       $("#testimonialSlider").removeClass("cS-hidden");
@@ -59,25 +59,25 @@ topbarClose.addEventListener("click", function (e) {
 
 // Navigation scroll
 
-const navigationLinks = document.getElementsByClassName("navigation__link");
+// const navigationLinks = document.getElementsByClassName("navigation__link");
 
-for (let i = 1; i < navigationLinks.length; ++i) {
-  navigationLinks[i].addEventListener("click", function (e) {
-    e.preventDefault();
-    const navigationContent = navigationLinks[i].textContent.toLowerCase();
-    switch (navigationContent) {
-      case "work":
-        window.scroll(0, 680);
-        break;
-      case "gallery":
-        window.scroll(0, 1380);
-        break;
-      case "contact":
-        window.scroll(0, 3100);
-        break;
-    }
-  });
-}
+// for (let i = 1; i < navigationLinks.length; ++i) {
+//   navigationLinks[i].addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const navigationContent = navigationLinks[i].textContent.toLowerCase();
+//     switch (navigationContent) {
+//       case "work":
+//         window.scroll(0, 680);
+//         break;
+//       case "gallery":
+//         window.scroll(0, 1380);
+//         break;
+//       case "contact":
+//         window.scroll(0, 3100);
+//         break;
+//     }
+//   });
+// }
 
 // Sticky navgiation
 const header = document.querySelector(".header");

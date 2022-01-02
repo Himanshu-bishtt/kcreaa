@@ -248,7 +248,7 @@ a {
   display: flex;
   align-items: center; }
   .hero__image {
-    background: url("/dist/static/img/hero-4.jpg");
+    background: url("/dist/static/img/hero.jpg");
     transform: rotateY(180deg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -301,11 +301,11 @@ a {
 
 .testimonials__heading span {
   position: absolute;
-  top: 9%;
-  left: 24%;
+  top: 7%;
+  left: 28%;
   background: #54483a;
   height: 0.2rem;
-  width: 95rem; }
+  width: 70%; }
 
 .testimonials__box {
   display: flex;

@@ -3,7 +3,7 @@
   align-items: center;
 
   &__image {
-    background: url("/dist/static/img/hero-4.jpg");
+    background: url("/dist/static/img/hero.jpg");
     transform: rotateY(180deg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,8 +12,6 @@
     height: 80vh;
     width: 70vw;
     width: 100vw;
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    // clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
   }
 
   &__text {
