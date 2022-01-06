@@ -1,9 +1,17 @@
 // "use strict";
 
+let testimonialItems;
+
+if (this.innerWidth <= 450) {
+  testimonialItems = 1;
+} else {
+  testimonialItems = 2;
+}
+
 $(document).ready(function () {
   $("#testimonialSlider").lightSlider({
     autoWidth: false,
-    item: 2,
+    item: testimonialItems,
     loop: false,
     controls: false,
     pager: true,

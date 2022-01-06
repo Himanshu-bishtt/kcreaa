@@ -1,9 +1,14 @@
 .features {
-  margin-top: 15rem;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+.feature__items {
+  margin-top: 5rem;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  overflow: hidden;
 }
 
 .feature__item {

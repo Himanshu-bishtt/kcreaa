@@ -178,7 +178,8 @@ a {
   .header .logo-image {
     width: 7rem; }
   .header .navigation {
-    display: flex; }
+    display: flex;
+    align-items: center; }
   .header .navigation__item {
     font-size: 1.8rem;
     font-weight: bold; }
@@ -240,6 +241,9 @@ a {
   grid-row: 3 / 4;
   grid-column: 5 / 7; }
 
+.gallery__item--9 {
+  display: none; }
+
 .footer {
   display: flex;
   justify-content: space-between; }
@@ -273,11 +277,14 @@ a {
       font-size: 2rem; }
 
 .features {
-  margin-top: 15rem;
+  margin-top: 5rem;
+  overflow: hidden; }
+
+.feature__items {
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  overflow: hidden; }
+  gap: 2rem; }
 
 .feature__item img {
   object-fit: cover;
@@ -300,6 +307,7 @@ a {
   margin-bottom: 5rem; }
 
 .testimonials__heading span {
+  display: none;
   position: absolute;
   top: 7%;
   left: 28%;
@@ -332,3 +340,65 @@ a {
     font-size: 1.3rem;
     padding-right: 2rem;
     text-align: start; }
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%; }
+  .heading--primary {
+    font-size: 3rem; }
+  .header .navigation__link {
+    padding: 1rem; }
+  .header .social-media {
+    display: none; }
+  .hero__image {
+    height: 60vh;
+    width: 100vw;
+    background-position-x: 0;
+    background-position-y: 0; }
+  .features__heading {
+    display: none; }
+  .feature__items {
+    grid-template-columns: repeat(2, 1fr); }
+  .gallery__heading {
+    display: none; }
+  .gallery-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 2rem; }
+  .gallery__item--1 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--2 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--3 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--4 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--5 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--6 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--7 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--8 {
+    grid-row: auto;
+    grid-column: auto; }
+  .gallery__item--9 {
+    display: block; }
+  .testimonials {
+    margin: 2rem 0rem; }
+  .contact__content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    margin-top: 2rem; }
+  .contact__form input,
+  .contact__form textarea,
+  .contact__form select {
+    width: 100%; } }
