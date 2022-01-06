@@ -4,18 +4,8 @@
     font-size: 50%;
   }
 
-  // headings
-  .heading--primary {
-    font-size: 3rem;
-    // text-transform: uppercase;
-  }
-
-  // navigationl
+  // navigation
   .header {
-    .logo-image {
-      //   width: 7rem;
-    }
-
     .navigation__link {
       padding: 1rem;
     }
@@ -29,22 +19,27 @@
     &__image {
       height: 60vh;
       width: 100vw;
-      background-position-x: 0;
+      background-position-x: -10rem;
       background-position-y: 0;
     }
   }
 
   // features
-
   .features__heading {
     display: none;
   }
   .feature__items {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .feature__item {
+    img {
+      width: 100%;
+      height: 40rem;
+    }
   }
 
   // gallery
-
   .gallery__heading {
     display: none;
   }

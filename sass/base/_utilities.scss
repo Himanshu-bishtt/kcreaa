@@ -33,6 +33,10 @@
 
 .u-padding-main {
   padding: 3rem;
+
+  @media (max-width: 450px) {
+    padding: 3rem 2rem;
+  }
 }
 
 .scrollToTop {
@@ -69,7 +73,12 @@
   background-color: rgba(0, 0, 0, 0.842);
   color: #fff;
   height: 4rem;
-  // transition: all 3s;
+  opacity: 1;
+  transition: all 0.6s;
+
+  @media (max-width: 450px) {
+    height: 5rem;
+  }
 
   &__content {
     margin: 0 auto;

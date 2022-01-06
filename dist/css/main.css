@@ -52,6 +52,9 @@ a {
 
 .u-padding-main {
   padding: 3rem; }
+  @media (max-width: 450px) {
+    .u-padding-main {
+      padding: 3rem 2rem; } }
 
 .scrollToTop {
   font-size: 1.2rem;
@@ -69,7 +72,12 @@ a {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.842);
   color: #fff;
-  height: 4rem; }
+  height: 4rem;
+  opacity: 1;
+  transition: all 0.6s; }
+  @media (max-width: 450px) {
+    .topbar {
+      height: 5rem; } }
   .topbar__content {
     margin: 0 auto; }
     .topbar__content:hover {
@@ -87,6 +95,9 @@ a {
 .heading--primary {
   font-size: 4rem;
   text-transform: uppercase; }
+  @media (max-width: 450px) {
+    .heading--primary {
+      font-size: 3rem; } }
 
 .heading--secondary {
   font-size: 3rem;
@@ -344,8 +355,6 @@ a {
 @media (max-width: 450px) {
   html {
     font-size: 50%; }
-  .heading--primary {
-    font-size: 3rem; }
   .header .navigation__link {
     padding: 1rem; }
   .header .social-media {
@@ -353,12 +362,15 @@ a {
   .hero__image {
     height: 60vh;
     width: 100vw;
-    background-position-x: 0;
+    background-position-x: -10rem;
     background-position-y: 0; }
   .features__heading {
     display: none; }
   .feature__items {
-    grid-template-columns: repeat(2, 1fr); }
+    grid-template-columns: repeat(1, 1fr); }
+  .feature__item img {
+    width: 100%;
+    height: 40rem; }
   .gallery__heading {
     display: none; }
   .gallery-container {

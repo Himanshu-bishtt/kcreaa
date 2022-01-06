@@ -1,6 +1,10 @@
 .heading--primary {
   font-size: 4rem;
   text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    font-size: 3rem;
+  }
 }
 
 .heading--secondary {
