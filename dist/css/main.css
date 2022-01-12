@@ -92,9 +92,6 @@ a {
       background: rgba(179, 179, 179, 0.164);
       border-radius: 50%; }
 
-.remove-topbar {
-  display: none !important; }
-
 .loader {
   position: absolute;
   top: 50%;
@@ -364,7 +361,7 @@ a {
 
 @media (max-width: 450px) {
   html {
-    font-size: 50%; }
+    font-size: 55%; }
   .header .navigation__link {
     padding: 1rem; }
   .header .social-media {

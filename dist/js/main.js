@@ -20,6 +20,7 @@ const showContent = function () {
 
 showContent();
 
+// testimonials slider
 let testimonialItems;
 
 if (this.innerWidth <= 450) {
@@ -41,6 +42,7 @@ $(document).ready(function () {
   });
 });
 
+// scroll to top button
 const scrollToTop = document.querySelector(".scrollToTop");
 scrollToTop.addEventListener("click", function () {
   window.scroll(0, 0);
@@ -50,7 +52,7 @@ const topbarClose = document.querySelector(".topbar__close");
 
 topbarClose.addEventListener("click", function (e) {
   e.preventDefault();
-  document.querySelector(".topbar").classList.add("remove-topbar");
+  document.querySelector(".topbar").remove();
 });
 
 // Navigation scroll
@@ -86,4 +88,19 @@ window.addEventListener("scroll", function () {
     header.style.boxShadow = "0rem 0rem 0rem rgba(0, 0, 0, 0.1)";
     header.style.opacity = "1";
   }
+});
+
+const navLink2 = document.querySelector(".navigation__link--2");
+const sectionFeatures = document.getElementById("features");
+
+navLink2.addEventListener("click", function (event) {
+  event.preventDefault();
+  const featuresCoords = sectionFeatures.getBoundingClientRect();
+
+  console.log(featuresCoords);
+
+  window.scrollTo(
+    featuresCoords.left + window.scrollX,
+    featuresCoords.top + window.scrollY
+  );
 });
