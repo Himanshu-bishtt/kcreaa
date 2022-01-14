@@ -90,17 +90,43 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const navLink2 = document.querySelector(".navigation__link--2");
-const sectionFeatures = document.getElementById("features");
+// navigation scroll event delegation
+document.querySelector(".navigation").addEventListener("click", function (e) {
+  e.preventDefault();
 
-navLink2.addEventListener("click", function (event) {
-  event.preventDefault();
-  const featuresCoords = sectionFeatures.getBoundingClientRect();
+  if (e.target.classList.contains("navigation__link")) {
+    const linkHref = e.target.getAttribute("href");
+    const sectionCoords = document
+      .querySelector(linkHref)
+      .getBoundingClientRect();
 
-  console.log(featuresCoords);
+    // document.querySelector(linkHref).scrollIntoView({ behavior: "smooth" });
 
-  window.scrollTo(
-    featuresCoords.left + window.scrollX,
-    featuresCoords.top + window.scrollY
-  );
+    setTimeout(() => {
+      window.scrollTo({
+        left: sectionCoords.left + window.scrollX,
+        top: sectionCoords.top - 100 + window.scrollY,
+        behavior: "smooth",
+      });
+    }, 300);
+  }
+});
+
+// topbar scroll contact
+const topbarLink = document.querySelector(".topbar__link");
+
+topbarLink.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const contactCoords = document
+    .querySelector(e.target.getAttribute("href"))
+    .getBoundingClientRect();
+
+  setTimeout(() => {
+    window.scrollTo({
+      left: contactCoords.left + window.scrollX,
+      top: contactCoords.top - 100 + window.scrollY,
+      behavior: "smooth",
+    });
+  }, 300);
 });
