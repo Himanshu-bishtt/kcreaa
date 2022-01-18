@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // height: 4rem;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 1rem 2rem 0rem 2rem;
-  position: sticky;
   top: 0;
   z-index: 100;
+  transition: all 0.3s;
 
   .logo-image {
     width: 7rem;
@@ -27,12 +26,10 @@
     color: $color-primary;
   }
 
-  .navigation__link {
+  .navigation__link:link,
+  .navigation__link:visited {
     padding: 1rem 2rem;
-
-    &:hover {
-      color: $color-primary;
-    }
+    transition: all 0.3s;
   }
 
   .social-media {
@@ -41,4 +38,10 @@
       width: 25px;
     }
   }
+}
+
+.sticky {
+  position: sticky;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
 }

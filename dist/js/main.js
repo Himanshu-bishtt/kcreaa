@@ -23,7 +23,7 @@ showContent();
 // testimonials slider
 let testimonialItems;
 
-if (this.innerWidth <= 450) {
+if (document.documentElement.clientWidth <= 450) {
   testimonialItems = 1;
 } else {
   testimonialItems = 2;
@@ -55,38 +55,18 @@ topbarClose.addEventListener("click", function (e) {
   document.querySelector(".topbar").remove();
 });
 
-// Navigation scroll
-
-// const navigationLinks = document.getElementsByClassName("navigation__link");
-
-// for (let i = 1; i < navigationLinks.length; ++i) {
-//   navigationLinks[i].addEventListener("click", function (e) {
-//     e.preventDefault();
-//     const navigationContent = navigationLinks[i].textContent.toLowerCase();
-//     switch (navigationContent) {
-//       case "work":
-//         window.scroll(0, 680);
-//         break;
-//       case "gallery":
-//         window.scroll(0, 1380);
-//         break;
-//       case "contact":
-//         window.scroll(0, 3100);
-//         break;
-//     }
-//   });
-// }
-
 // Sticky navgiation
 const header = document.querySelector(".header");
+const sectionFeatureCoords = document
+  .querySelector(".features")
+  .getBoundingClientRect();
 
+console.log(sectionFeatureCoords);
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 200) {
-    header.style.boxShadow = "0rem 1rem 1rem rgba(0, 0, 0, 0.1)";
-    header.style.opacity = "0.95";
+  if (this.window.scrollY > sectionFeatureCoords.top - 200) {
+    header.classList.add("sticky");
   } else {
-    header.style.boxShadow = "0rem 0rem 0rem rgba(0, 0, 0, 0.1)";
-    header.style.opacity = "1";
+    header.classList.remove("sticky");
   }
 });
 
@@ -130,3 +110,29 @@ topbarLink.addEventListener("click", function (e) {
     });
   }, 300);
 });
+
+const menuFade = (opacity) => {
+  return function (e) {
+    const link = e.target;
+    const siblings = e.target
+      .closest(".navigation")
+      .querySelectorAll(".navigation__link");
+    const logo = document.querySelector(".logo");
+    const socialIcons = document.querySelector(".social-media");
+
+    siblings.forEach((el) => {
+      if (link !== el) {
+        el.style.opacity = opacity;
+        logo.style.opacity = opacity;
+        socialIcons.style.opacity = opacity;
+      }
+    });
+  };
+};
+
+// menu fade animation
+document
+  .querySelector(".navigation")
+  .addEventListener("mouseover", menuFade(0.6));
+
+document.querySelector(".navigation").addEventListener("mouseout", menuFade(1));
