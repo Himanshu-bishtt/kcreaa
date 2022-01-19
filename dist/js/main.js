@@ -48,27 +48,33 @@ scrollToTop.addEventListener("click", function () {
   window.scroll(0, 0);
 });
 
+// topbar close
 const topbarClose = document.querySelector(".topbar__close");
-
 topbarClose.addEventListener("click", function (e) {
   e.preventDefault();
   document.querySelector(".topbar").remove();
 });
 
 // Sticky navgiation
+const hero = document.querySelector(".hero");
 const header = document.querySelector(".header");
-const sectionFeatureCoords = document
-  .querySelector(".features")
-  .getBoundingClientRect();
 
-console.log(sectionFeatureCoords);
-window.addEventListener("scroll", function () {
-  if (this.window.scrollY > sectionFeatureCoords.top - 200) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-});
+const callback = function (entries, observer) {
+  const [entry] = entries;
+
+  entry.isIntersecting
+    ? header.classList.remove("sticky")
+    : header.classList.add("sticky");
+};
+
+const options = {
+  root: null,
+  rootMargin: `-${getComputedStyle(header).height}`,
+  threshold: 0,
+};
+
+const observer = new IntersectionObserver(callback, options);
+observer.observe(hero);
 
 // navigation scroll event delegation
 document.querySelector(".navigation").addEventListener("click", function (e) {

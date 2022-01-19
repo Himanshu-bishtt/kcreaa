@@ -426,4 +426,6 @@ a {
   .contact__form input,
   .contact__form textarea,
   .contact__form select {
-    width: 100%; } }
+    width: 100%; }
+  .success {
+    width: 75vw; } }
