@@ -148,7 +148,6 @@ const allSections = document.querySelectorAll(".section");
 const sectionObserver = new IntersectionObserver(
   function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entry);
       if (entry.isIntersecting) {
         entry.target.classList.remove("section--hidden");
         sectionObserver.unobserve(entry.target);
@@ -165,3 +164,29 @@ allSections.forEach((section) => {
   section.classList.add("section--hidden");
   sectionObserver.observe(section);
 });
+
+// contact image lazy load
+const contactImage = document.querySelector("img[data-src]");
+
+console.log(contactImage);
+
+const contactObserver = new IntersectionObserver(
+  function (entries, observer) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.src = entry.target.dataset.src;
+
+      entry.target.addEventListener("load", function () {
+        entry.target.classList.remove("lazy-img");
+      });
+
+      observer.unobserve(entry.target);
+    });
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+
+contactObserver.observe(contactImage);
