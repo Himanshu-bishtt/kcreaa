@@ -142,3 +142,26 @@ document
   .addEventListener("mouseover", menuFade(0.6));
 
 document.querySelector(".navigation").addEventListener("mouseout", menuFade(1));
+
+const allSections = document.querySelectorAll(".section");
+
+const sectionObserver = new IntersectionObserver(
+  function (entries, observer) {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("section--hidden");
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.15,
+  }
+);
+
+allSections.forEach((section) => {
+  section.classList.add("section--hidden");
+  sectionObserver.observe(section);
+});
